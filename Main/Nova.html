@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Service | Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/NovaLogo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="notification-container"></div>
+    <div class="loading-screen">
+        <div class="loader-container">
+            <div class="glow"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+        </div>
+        <div class="text-container">
+            <div id="loading-text">Initializing Login System</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <button class="switch-form" onclick="switchForm('create')">Create Account</button>
+            <button class="help-button" onclick="goToHelpPage()">Need Help?</button>
+        </div>
+
+        <div class="create-account-box" style="display: none;">
+            <h2>Create Account</h2>
+            <input type="text" id="create-username" placeholder="Username" required>
+            <input type="password" id="create-password" placeholder="Password" required>
+            <button onclick="createAccount()">Create Account</button>
+            <button class="switch-form" onclick="switchForm('login')">Back to Login</button>
+        </div>
+    </div>
+
+
+
+    <div id="miniHome" style="display: none;">
+        <div class="mini-container">
+          <nav class="side-navbar">
+            <img src="/img/NovaLogo.png" alt="Logo" class="nav-logo">
+            <div class="nav-icons">
+              <i class='bx bx-home' id="homeIcon"></i>
+              <i class='bx bx-download' id="downloadIcon"></i>
+              <i class='bx bx-library'></i>
+            </div>
+            <div class="user-account">
+              <i class='bx bxs-user-account'></i>
+              <span class="username"></span>
+            </div>
+          </nav>
+          <div class="content-area">
+            <div id="homeContent">
+              <!-- Home content here -->
+            </div>
+            <div id="downloadContent" style="display: none;">
+                <div class="download-container">
+                  <div class="download-box">
+                    <img src="/img/maxresdefault.jpg" alt="Download Image" class="download-image">
+                    <div class="download-info">
+                      <span class="version">1.0.1</span>
+                      <span class="app-name">Nova Service</span>
+                      <button class="download-btn" onclick="startDownload()">Download</button>
+                    </div>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress"></div>
+                    </div>
+                    <span class="progress-percentage">0%</span>
+                  </div>
+                </div>
+              </div>              
+              
+        </div>
+      </div>
+      
+     
+
+    <div class="credits">© Nova Service</div>
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

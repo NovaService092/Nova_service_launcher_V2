@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Service | Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/img/NovaLogo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <style>
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background: #0f0f0f;
+        color: #ff6666;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        }
+   </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader-container">
+            <div class="glow"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+        </div>
+        <div class="text-container">
+            <div id="loading-text">Initializing Login System</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="help-container">
+        <h1 class="neon-text">Nova Service Help Center</h1>
+        <div class="iframe-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfxhotbo-m3k0N0C1W9URXslR-4PB_SAcfarHe5AdxS4Mldmw/viewform?usp=sf_link" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <button onclick="goBack()" class="back-button">Back to Login</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.location.href = 'Nova.html';
+        }
+    </script>
+</body>
+</html>
